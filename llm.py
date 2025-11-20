@@ -20,10 +20,5 @@ llm_by_agent = ChatDeepSeek(
     api_base=AGENT_BASE_URL, 
     api_key=AGENT_API_KEY)
 
-# print(llm_by_agent.invoke("你是谁？"))
+print(llm_by_agent.invoke("你是谁？"))
 
-for chunk in llm_by_agent.stream("你是谁？"):
-    if chunk.additional_kwargs.get("reasoning_content"):
-        print(chunk.additional_kwargs.get("reasoning_content"), end="", flush=True)
-    else:
-        print(chunk.text, end="", flush=True)
