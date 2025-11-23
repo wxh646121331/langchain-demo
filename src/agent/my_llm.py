@@ -2,8 +2,8 @@ import langchain_openai
 from langchain_openai import ChatOpenAI
 from langchain_deepseek import ChatDeepSeek
 from pydantic import ConfigDict
-from env import AGENT_API_KEY, AGENT_BASE_URL, DEEPSEEK_BASE_URL, DEEPSEEK_API_KEY, SILICONFLOW_API_KEY, SILICONFLOW_BASE_URL
-from scheme.movie import Movie
+from .env import SILICONFLOW_BASE_URL
+from .env import SILICONFLOW_API_KEY
 # llm_by_openai = ChatOpenAI(model="deepseek-reasoner", 
 #     base_url=DEEPSEEK_BASE_URL, 
 #     api_key=DEEPSEEK_API_KEY)
@@ -28,6 +28,3 @@ llm = ChatOpenAI(
 
 # print(llm.invoke("你是谁？"))
 
-movie_model = llm.with_structured_output(Movie)
-
-print(movie_model.invoke("我想要一部中国的科幻电影，请推荐一部"))

@@ -1,0 +1,5 @@
+# Python 路径配置文件
+# 将此文件放在 site-packages 目录或添加到 PYTHONPATH
+# 或者使用 python -m site 来添加
+/Users/wuxinhong/code/langchain-demo
+

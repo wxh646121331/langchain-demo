@@ -1,0 +1,29 @@
+[project]
+name = "agent"
+version = "0.0.1"
+description = "Default template for PDM package"
+authors = [
+    {name = "wuxinhong", email = "wuxinhong@cnht.com.cn"},
+]
+dependencies = [
+    "langgraph>=1.0.0",
+    "langchain",
+    "langchain-openai",
+    "langchain-deepseek",
+    "python-dotenv>=1.0.1",
+    "langgraph-cli[inmem]",
+]
+requires-python = ">=3.11"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[tool.pdm.build]
+package-dir = "src"

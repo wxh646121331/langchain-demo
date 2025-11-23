@@ -2,3 +2,5 @@ langchain
 langchain-openai
 langchain-deepseek
 dotenv
+langgraph-api
+langgraph-cli[inmem]
