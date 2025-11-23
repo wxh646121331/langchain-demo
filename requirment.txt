@@ -4,3 +4,6 @@ langchain-deepseek
 dotenv
 langgraph-api
 langgraph-cli[inmem]
+zhipuai
+zai-sdk
+logging

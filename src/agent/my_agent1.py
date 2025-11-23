@@ -1,4 +1,6 @@
 from agent.my_llm import llm
+from agent.tool.web_search_tool import web_search
+from agent.tool.date_tool import get_date
 from langchain.agents import create_agent
 
 
@@ -9,6 +11,6 @@ def get_weather(city: str) -> str:
 
 agent = create_agent(
     llm,
-    tools = [get_weather],
-    system_prompt = "你是一个天气预报员，请根据用户的问题预报天气"
+    tools = [get_date, web_search],
+    system_prompt = "尽你所能回答用户的问题"
 )
