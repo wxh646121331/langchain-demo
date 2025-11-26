@@ -1,3 +1,4 @@
+from ast import main
 from agent.my_llm import llm
 from agent.tool.web_search_tool import web_search
 from agent.tool.date_tool import get_date
@@ -14,3 +15,8 @@ agent = create_agent(
     tools = [get_date, web_search],
     system_prompt = "尽你所能回答用户的问题"
 )
+
+
+if __name__ == "__main__":
+    result = agent.invoke({"input": "北京天气怎么样？"})
+    print(result)

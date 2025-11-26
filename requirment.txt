@@ -7,3 +7,5 @@ langgraph-cli[inmem]
 zhipuai
 zai-sdk
 logging
+pandasai
+pandasai_openai
